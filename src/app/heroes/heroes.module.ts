@@ -1,29 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeroesRoutingModule } from './heroes-routing.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MaterialModule } from '../material/material.module';
 
-//Componentes
-import { AgregarComponent } from './pages/agregar/agregar.component';
-import { BuscarComponent } from './pages/buscar/buscar.component';
-import { HeroeComponent } from './pages/heroe/heroe.component';
-import { HeroesHomeComponent } from './pages/heroes-home/heroes-home.component';
-import { ListadoComponent } from './pages/listado/listado.component';
+import { HeroesRoutingModule } from './heroes-routing.module';
+import { HeroePagesComponent } from './pages/heroe-pages/heroe-pages.component';
+import { ListPagesComponent } from './pages/list-pages/list-pages.component';
+import { NewPagesComponent } from './pages/new-pages/new-pages.component';
+import { SearchPagesComponent } from './pages/search-pages/search-pages.component';
+import { LayoutPagesComponent } from './pages/layout-pages/layout-pages.component';
+
 
 @NgModule({
   declarations: [
-    AgregarComponent,
-    BuscarComponent,
-    HeroeComponent,
-    HeroesHomeComponent,
-    ListadoComponent
+    HeroePagesComponent,
+    ListPagesComponent,
+    LayoutPagesComponent,
+    NewPagesComponent,
+    SearchPagesComponent
   ],
   imports: [
     CommonModule,
-    HeroesRoutingModule,
-    FlexLayoutModule,
-    MaterialModule
+    HeroesRoutingModule
   ]
 })
 export class HeroesModule { }

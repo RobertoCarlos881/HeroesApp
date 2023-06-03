@@ -1,19 +1,21 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './pages/login/login.component';
-import { RegistroComponent } from './pages/registro/registro.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { LayoutPagesComponent } from "./pages/layout-pages/layout-pages.component";
+import { LoginPagesComponent } from "./pages/login-pages/login-pages.component";
+import { RegisterPagesComponent } from "./pages/register-pages/register-pages.component";
 
 const routes: Routes = [
   {
     path: '',
+    component: LayoutPagesComponent,
     children: [
       {
         path: 'login',
-        component: LoginComponent
+        component: LoginPagesComponent
       },
       {
-        path: 'registro',
-        component: RegistroComponent
+        path: 'new-account',
+        component: RegisterPagesComponent
       },
       {
         path: '**',
@@ -21,15 +23,10 @@ const routes: Routes = [
       }
     ]
   }
-]
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    RouterModule.forChild(routes)
-  ], 
-  exports: [
-    RouterModule
-  ]
+  imports: [ RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class AuthRoutingModule { }
+export class AuthRoutingModule {}

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ErrorPagesComponent } from './shared/error-pages/error-pages.component';
+import { RouterModule, Routes } from '@angular/router';
+import { Error404PagesComponent } from './shared/pages/error404-pages/error404-pages.component';
 
 const routes: Routes = [
   {
@@ -13,21 +13,21 @@ const routes: Routes = [
   },
   {
     path: '404',
-    component: ErrorPagesComponent
+    component: Error404PagesComponent
+  },
+  {
+    path: '',
+    redirectTo: 'heroes',
+    pathMatch: 'full'
   },
   {
     path: '**',
     redirectTo: '404'
   }
-]
-
+];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)
-  ], 
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

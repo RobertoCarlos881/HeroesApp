@@ -1,51 +1,46 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ListadoComponent } from './pages/listado/listado.component';
-import { AgregarComponent } from './pages/agregar/agregar.component';
-import { BuscarComponent } from './pages/buscar/buscar.component';
-import { HeroeComponent } from './pages/heroe/heroe.component';
-import { HeroesHomeComponent } from './pages/heroes-home/heroes-home.component';
+import { RouterModule, Routes } from '@angular/router';
+import { LayoutPagesComponent } from './pages/layout-pages/layout-pages.component';
+import { NewPagesComponent } from './pages/new-pages/new-pages.component';
+import { SearchPagesComponent } from './pages/search-pages/search-pages.component';
+import { ListPagesComponent } from './pages/list-pages/list-pages.component';
+import { HeroePagesComponent } from './pages/heroe-pages/heroe-pages.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HeroesHomeComponent,
+    component: LayoutPagesComponent,
     children: [
       {
-        path: 'listado',
-        component: ListadoComponent
+        path: 'new-hero',
+        component: NewPagesComponent,
       },
       {
-        path: 'agregar',
-        component: AgregarComponent
+        path: 'search',
+        component: SearchPagesComponent,
       },
       {
-        path: 'editar/:id',
-        component: AgregarComponent
+        path: 'edit/:id',
+        component: NewPagesComponent,
       },
       {
-        path: 'buscar',
-        component: BuscarComponent
+        path: 'list',
+        component: ListPagesComponent,
       },
       {
         path: ':id',
-        component: HeroeComponent
+        component: HeroePagesComponent,
       },
       {
         path: '**',
-        redirectTo: 'listado'
-      }
-    ]
-  }
-]
+        redirectTo: 'list',
+      },
+    ],
+  },
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    RouterModule.forChild(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class HeroesRoutingModule { }
