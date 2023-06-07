@@ -48,14 +48,6 @@
       "characters": "Oliver Queen"
     },
     {
-      "id": "dc-wonder",
-      "superhero": "Wonder Woman",
-      "publisher": "DC Comics",
-      "alter_ego": "Princess Diana",
-      "first_appearance": "All Star Comics #8",
-      "characters": "Princess Diana"
-    },
-    {
       "id": "dc-martian",
       "superhero": "Martian Manhunter",
       "publisher": "DC Comics",
@@ -70,14 +62,6 @@
       "alter_ego": "Dick Grayson",
       "first_appearance": "Detective Comics #38",
       "characters": "Dick Grayson"
-    },
-    {
-      "id": "dc-blue",
-      "superhero": "Blue Beetle",
-      "publisher": "DC Comics",
-      "alter_ego": "Dan Garret",
-      "first_appearance": "Mystery Men Comics #1",
-      "characters": "Dan Garret, Ted Kord, Jaime Reyes"
     },
     {
       "id": "dc-black",
@@ -166,6 +150,15 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "SxgNr_5",
+      "superhero": "Atlas",
+      "publisher": "DC Comics",
+      "alter_ego": "Miguelon",
+      "first_appearance": "Smite 2020",
+      "characters": "Atlas",
+      "alt_img": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/10028503/d4b3a54e14aa0481ec3fbcb551ec4667033d3362.jpg"
     }
   ]
 }
